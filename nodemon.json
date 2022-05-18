@@ -1,0 +1,12 @@
+{
+    "execMap": {
+        "js": "sucrase-node"
+    },
+    "env": {
+        "MYSQL_HOST": "localhost",
+        "MYSQL_USER": "joseaugusto",
+        "MYSQL_PASSWORD": "123456789",
+        "MYSQL_DATABASE": "sucos_vendas",
+        "MYSQL_PORT": 3306
+    }
+}
