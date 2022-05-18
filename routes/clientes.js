@@ -7,6 +7,40 @@ const AnaliseClientes = require('../action/analiseclientes');
 router.get('/', AnaliseClientes.getClientes);
 
 
+module.exports = router;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // // retorna os dados de um cliente
 // router.get('/:nome', (req, res, next) => {
 //     mysql.getConnection((error, conn) => {
@@ -22,10 +56,6 @@ router.get('/', AnaliseClientes.getClientes);
 //         )
 //     })
 // });
-
-
-
-
 // // retorna os dados de um cliente
 // router.get('/:cpf', (req, res, next) => {
 //     mysql.getConnection((error, conn) => {
@@ -42,13 +72,6 @@ router.get('/', AnaliseClientes.getClientes);
 //     })
 // });
 
-
-
-
-
-
-
-
 // //Retorna todos os clientes.....
 // router.get('/', (req, res, next) => {
 //     res.status(200).send({
@@ -61,7 +84,6 @@ router.get('/', AnaliseClientes.getClientes);
 //         mensagem: 'Cliente Inserido'
 //     })
 // });
-
 // // retorna os dados de um cliente
 // router.get('/:id_cliente', (req, res, next) => {
 //     const id = req.params.id_cliente
@@ -76,22 +98,15 @@ router.get('/', AnaliseClientes.getClientes);
 //         })
 //     }
 // });
-
 // //Altera um cleinte
 // router.patch('/', (req, res, next) => {
 //     res.status(201).send({
 //         mensagem: 'Usando o PATCH dentro da rota de clientes'
 //     })
 // });
-
 // // Deleta um cliente
 // router.delete('/', (req, res, next) => {
 //     res.status(201).send({
 //         mensagem: 'Usando o DELETE dentro da rota de clientes'
 //     })
 // });
-
-
-
-
-module.exports = router;
