@@ -7,6 +7,17 @@ const rotaProdutos = require('./routes/produtos');
 app.use('/clientes', rotaClientes);
 app.use('/produtos', rotaProdutos);
 
+module.exports = app;
+
+
+
+
+
+
+
+
+
+
 
 
 // //Quando não encontra rota
@@ -26,4 +37,4 @@ app.use('/produtos', rotaProdutos);
 // });
 
 
-module.exports = app;
+

@@ -3,20 +3,11 @@ const router = express.Router();
 const mysql = require('../configs/databases').pool
 
 
-router.get('/', (req, res, next) => {
+const AnaliseProdutos = require('../action/analiseprodutos');
+router.get('/', AnaliseProdutos.getProdutos);
 
-    mysql.getConnection((error, conn) => {
-        if (error) { return res.status(500).send({ error: error }) }
-        conn.query(
-            'SELECT * FROM vendas_sucos.produtos;',
-            (error, resultado, fields) => {
-                if (error) { return res.status(500).send({ error: error }) }
-                return res.status(200).send({ response: resultado })
-            }
-        )
-    })
 
-})
+module.exports = router;
 
 
 
@@ -25,6 +16,44 @@ router.get('/', (req, res, next) => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// router.get('/', (req, res, next) => {
+
+//     mysql.getConnection((error, conn) => {
+//         if (error) { return res.status(500).send({ error: error }) }
+//         conn.query(
+//             'SELECT * FROM vendas_sucos.produtos;',
+//             (error, resultado, fields) => {
+//                 if (error) { return res.status(500).send({ error: error }) }
+//                 return res.status(200).send({ response: resultado })
+//             }
+//         )
+//     })
+
+// })
 // //Retorna todos os produtos.....
 // router.get('/', (req, res, next) => {
 //     res.status(200).send({
@@ -37,7 +66,6 @@ router.get('/', (req, res, next) => {
 //         mensagem: ' produto inserido '
 //     })
 // });
-
 // // retorna os dados de um produto
 // router.get('/:id_produto', (req, res, next) => {
 //     const id = req.params.id_produto
@@ -52,15 +80,12 @@ router.get('/', (req, res, next) => {
 //         })
 //     }
 // });
-
-
 // //Altera um produto
 // router.patch('/', (req, res, next) => {
 //     res.status(201).send({
 //         mensagem: 'Produto Alterado'
 //     })
 // });
-
 
 // //Deleta um produto 
 // router.delete('/', (req, res, next) => {
@@ -72,4 +97,3 @@ router.get('/', (req, res, next) => {
 
 
 
-module.exports = router;
